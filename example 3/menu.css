@@ -39,7 +39,7 @@
     background: #009fe1;
 }
 
-.nav-list .nav-item:hover {
+.nav-list > .nav-item:hover {
     background: #009fe1;
 }
 
