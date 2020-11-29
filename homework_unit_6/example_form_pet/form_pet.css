@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d8a997;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.btn {
+    padding: 13px 45px;
+    background: none;
+    border-radius: 70px;
+    border: 1px solid #888;
+    outline: none;
+}
+
+
+.shop {
+    background-color: #7f7182;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shop .shop__name {
+    font-size: 2rem;
+    padding-top: 50px;
+    text-transform: uppercase   ;
+}
+
+.shop .shop__name i {
+    padding: 10px;
+    background-color: #f5b2ab;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+}
+
+.shop .shop__thumb {
+    position: relative;
+    top: 10px;
+}
+
+.form-wrapper {
+    background-color: #fac7c3;
+}
+.form {
+    padding: 50px 40px 0 40px;
+}
+
+.form .form__heading {
+    font-size: 2rem;
+}
+.form__information {
+    margin-top: 10px;
+}
+
+.form__information .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+[class^="form__information"] .form-group {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5px;
+}
+
+[class^="form__information"] .form-group label {
+    margin: 0;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+[class^="form__information"] label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+[class^="form__information"] input {
+    background-color: none;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+[class^="form__information"] [type="radio"], [class^="form__information"] [type="file"] {
+    display: none;
+}
+
+[class^="form__information"] [type="radio"]:checked + label {
+    background-color: #f5b2ab;
+}
+
+
+.form__information .form__information__photo {
+    margin-bottom: 34px;
+    font-size: 1.2rem;
+}
+
+.form__information .form__information__photo i {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.form__information .form__information__weight {
+    margin-bottom: 50px;
+}
+
+.form-wrapper .form__btn {
+    padding: 30px 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrapper .form__btn .btn--indigo {
+    background-color: #7f7182;
+    color: #fff;
+}
+
+
+

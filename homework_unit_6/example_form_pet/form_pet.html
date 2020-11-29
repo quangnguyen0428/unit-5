@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="form_pet.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="shop">
+                    <h3 class="shop__name">
+                        <i class="fas fa-paw"></i>
+                        Pupassure
+                    </h3>
+
+                    <div class="shop__thumb">
+                        <img src="image/dogg.png" alt="pet">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+                <div class="form-wrapper">
+                    <div class="form">
+                        <div class="form__heading">
+                            <h3>
+                                Yay, puppies! Ensure your pup gets the best care!
+                            </h3>
+                        </div>
+                        <div class="form__information">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="form__information__name">
+                                        <label>Name</label>
+                                        <input type="text" name="name" placeholder="Pet's Name" class="form-group">
+                                    </div>
+
+                                    <div class="form__information__breed">
+                                        <label>Breed</label>
+                                        <input type="text" name="breed" placeholder="Pet's Breed" class="form-group">
+                                    </div>
+
+                                    <div class="form__information__gender">
+                                        <label>Gender</label>
+
+                                        <div class="form-group">
+                                        <input type="radio" name="gender" id="female"  checked>
+                                        <label for="female">Female</label>
+
+                                        <input type="radio" name="gender" id="male">
+                                        <label for="male">Male</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-5">
+                                    <div class="form__information__photo">
+                                        <label for="file">
+                                            <i class="fas fa-camera-retro"></i>
+                                            Upload a photo
+                                        </label>
+                                        <input id="file" type="file" name="photo">
+                                    </div>
+
+                                    <div class="form__information__birthday">
+                                        <label> Birthday</label>
+                                        <input type="text" name="birthday" placeholder="MM/DD/YYYY" class="form-group">
+                                    </div>
+
+                                    <div class="form__information__spayed">
+                                        <label>Spayed or Neutered</label>
+
+                                        <div class="form-group">
+                                        <input type="radio" name="spayed or neutered" id="spayed" checked>
+                                        <label for="spayed">Spayed</label>
+
+                                        <input type="radio" name="spayed or neutered" id="neutered">
+                                        <label for="neutered">Neutered</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form__information__weight">
+                                        <label>Weight</label>
+                                        <div class="form-group">
+                                        <input type="radio" name="weight" id="0-25-lbs" >
+                                        <label for="0-25-lbs">0-25 lbs</label>
+
+                                        <input type="radio" name="weight" id="25-50-lbs" checked>
+                                        <label for="25-50-lbs">25-50 lbs</label>
+
+                                        <input type="radio" name="weight" id="50-100-lbs">
+                                        <label for="50-100-lbs">50-100 lbs</label>
+
+                                        <input type="radio" name="weight" id="100-lbs">
+                                        <label for="100-lbs">100+ lbs</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__btn">
+                        <button class="btn btn--white">Back</button>
+                        <button class="btn btn--indigo">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

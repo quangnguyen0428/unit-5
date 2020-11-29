@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background: #24354b;
+}
+
+.navbar__list {
+    list-style: none;
+}
+
+.navbar__list .navbar__list__item {
+    display: inline-block;
+    padding: 20px 20px;
+    transition: 0.3s;
+    margin-right: -4px;
+    position: relative;
+}
+
+.active {
+    background: #009fe1;
+}
+
+.navbar  .navbar__list__item:hover {
+    background: #009fe1;
+}
+
+.navbar__list .navbar__list__item .navbar__list__item__link {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+.navbar__list .navbar__list__item .navbar__list__item__link i {
+    margin: 0 10px;
+}
+
+.dropdown__list__item {
+    display: block;
+    padding: 20px;
+    margin: 0;
+}
+
+.dropdown__list__item__link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar__list .navbar__list__item:hover .dropdown {
+    display: block;
+}
+.dropdown .navbar__list__item:hover .dropdown {
+    display: block;
+}
+
+[class^="dropdown"] {
+    list-style: none;
+    display: block;
+}
+
+.dropdown--down {
+    position: absolute;
+    width: 200px;
+    top: 100%;
+    left: 0;
+    background-color: #385671;
+}
+.dropdown--right {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #567987;
+}
+
+.dropdown .dropdown__list__item:hover {
+    background-color: #009fe1;
+}
