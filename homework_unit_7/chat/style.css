@@ -117,7 +117,7 @@ ul {
 }
 
 .chat .friends .friends__list {
-  height: 100vh;
+  height: 95vh;
   overflow: auto;
 }
 

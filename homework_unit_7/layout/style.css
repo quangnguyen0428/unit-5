@@ -488,6 +488,9 @@ ul {
     font-size: 13px;
     line-height: 25px;
   }
+  .footer .footer__contact .footer__contact__form {
+    width: 85%;
+  }
   .footer .footer__middle {
     padding-bottom: 30px;
     padding-left: 20px;
