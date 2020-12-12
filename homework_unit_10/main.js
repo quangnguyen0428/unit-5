@@ -1,3 +1,4 @@
+const validate = number => typeof(number) === 'number' && number > 0 && number < 31
 // Example 1:
 function showMultiplicationTable (number) {
   if (typeof number !== "number" || number < 1 || number > 10) {
@@ -10,7 +11,7 @@ function showMultiplicationTable (number) {
 
 // Example 2:
 function getEvenNumber (number) {
-  if (typeof number !== "number" || number < 1 || number > 30) {
+  if (!(validate(number))) {
     return `Data false`
   }
   for (let i = 2; i <= number; i += 2) {
@@ -21,7 +22,7 @@ function getEvenNumber (number) {
 // Example 3:
 function getSumNumber (number) {
   let sum = 0
-  if (typeof number !== "number" || number < 1 || number > 30) {
+  if (!(validate(number))) {
     return `Data false`
   }
   for (let i = 1; i <= number; i++) {
@@ -33,7 +34,7 @@ function getSumNumber (number) {
 // Example 4:
 function getFactorial (number) {
   let factorial = 1
-  if (typeof number !== "number" || number < 1 || number > 30) {
+  if (!(validate(number))) {
     return `Data false`
   }
   for (let i = 1; i <= number; i++) {
@@ -55,8 +56,8 @@ function coutnEvenInArray (array) {
 
 // Example 6:
 function deleteDuplicateElements (array) {
-  var newArray = []
-  for (var i = 0; i < array.length; i++) {
+  const newArray = []
+  for (let i = 0; i < array.length; i++) {
     if (newArray.indexOf(array[i]) === -1) {
       newArray.push(array[i])
     }
@@ -85,7 +86,7 @@ const studentScores = [
 ]
 
 function mergeTheArrays (arrayStudentName, arrayStudentScore) {
-  let newArray = []
+  const newArray = []
 
   arrayStudentName.forEach(studentName => {
       arrayStudentScore.forEach(studentScore => {
@@ -97,7 +98,6 @@ function mergeTheArrays (arrayStudentName, arrayStudentScore) {
 
   return newArray
 }
-
 
 // Example 8:
 const students = [
