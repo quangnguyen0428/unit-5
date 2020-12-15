@@ -26,7 +26,7 @@ function getSumNumber (number) {
     return `Data false`
   }
   for (let i = 1; i <= number; i++) {
-      sum += i
+    sum += i
   }
   return sum
 }
@@ -89,14 +89,34 @@ function mergeTheArrays (arrayStudentName, arrayStudentScore) {
   const newArray = []
 
   arrayStudentName.forEach(studentName => {
-      arrayStudentScore.forEach(studentScore => {
-          if (studentScore.id === studentName.id) {
-              newArray.push(Object.assign(studentName, studentScore))
-          }
-      });
-  });
+    arrayStudentScore.forEach(studentScore => {
+      if (studentScore.id === studentName.id) {
+        newArray.push(Object.assign(studentName, studentScore))
+      }
+    })
+  })
 
   return newArray
+}
+
+const mergeStudents = (names, score) => {
+  const result = []
+  const findItemScore = item => {
+    for (let i = 0; i <= score.length; i++) {
+      const currentStudent = score[i];
+      if (currentStudent.id === item.id){
+        return currentStudent
+      }
+    }
+    return null
+  }
+
+  names.forEach((item)=>{
+    const student = findItemScore(item)
+    result.push({id: item.id, name: item.name, score: (student && student.score) || null})
+  })
+
+  return result
 }
 
 // Example 8:
@@ -106,40 +126,70 @@ const students = [
   { id: 3, name: 'Hoàng Văn Nam', score: 3.7 },
   { id: 4, name: 'Vũ Ngọc Duy', score: 6.9 },
   { id: 5, name: 'Nguyễn Minh Nhật', score: 5.2 },
-  { id: 6, name: 'Phí Duy Quân', score: 9.6 },
+  { id: 6, name: 'Phí Duy Quân', score: 9.2 },
   { id: 7, name: 'Trần Minh Minh', score: 6.1 }
 ]
 
-function showStudentRatings (students) {
-  let min = students[0].score
-  let max = students[0].score
-  const highScore = {}
-  const badScore = {}
+// function showStudentRatings (students) {
+//   let min = students[0].score
+//   let max = students[0].score
+//   const highScore = {}
+//   const badScore = {}
+
+//   students.forEach(student => {
+//     if (max < student.score) {
+//       max = student.score
+//     }
+//     if (min > student.score) {
+//       min = student.score
+//     }
+//   })
+
+//   students.forEach(student => {
+//     if (student.score === max) {
+//       highScore.id = student.id
+//       highScore.name = student.name
+//       highScore.score = student.score
+//     }
+//     if (student.score === min) {
+//       badScore.id = student.id
+//       badScore.name = student.name
+//       badScore.score = student.score
+//     }
+//   })
+
+//   return {
+//     highScore,
+//     badScore
+//   }
+// }
+
+function findMinMaxList (students) {
+  let min = students[0] ? students[0].score : 11
+  let max = -1
+  const maxList = []
+  const minList = []
 
   students.forEach(student => {
-    if (max < student.score) {
-      max = student.score
-    }
-    if (min > student.score) {
+    if(student.score < min) {
       min = student.score
     }
+
+    if(student.score > max) {
+      max = student.score
+    }
   })
 
   students.forEach(student => {
-    if (student.score === max) {
-      highScore.id = student.id
-      highScore.name = student.name
-      highScore.score = student.score
+    if(student.score === max) {
+      maxList.push(student)
     }
-    if (student.score === min) {
-      badScore.id = student.id
-      badScore.name = student.name
-      badScore.score = student.score
-    }
-  })
 
-  return {
-    highScore,
-    badScore
-  }
+    if(student.score === min) {
+      minList.push(student)
+    }
+  });
+  return {maxList, minList}
 }
+
+console.log(findMinMaxList(students));
