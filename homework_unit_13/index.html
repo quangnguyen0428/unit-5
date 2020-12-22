@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <span>Example 1</span>
+        <div class="hoverme" onmouseleave="showTime()" onmouseover="showTime()">Show Time</div>
+
+        <span>Example 2</span>
+        <input type="text" class="username" onchange='validateUserName(this.value)'>
+
+        <span>Example 3</span>
+        <input type="number" class="username" onchange='validateMoney(this.value)' min="0" max="1000">
+
+        <span>Example4</span>
+        <div ondblclick="isDoubleClick()">Click me</div>
+
+        <span>Example 5</span>
+        <div onmouseup="getText()">Type text here</div>
+
+        <span>Example 6</span>
+        <select class="fluits">
+            <option value="1">Apple</option>
+            <option value="2">Banana</option>
+            <option value="3">Orange</option>
+        </select>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
