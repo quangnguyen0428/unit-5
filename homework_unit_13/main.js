@@ -18,21 +18,21 @@ const validateMoney = value => {
 }
 
 // Example 4
-const isDoubleClick = () => alert('Double click')
+const checkDoubleClick = () => alert('Double click')
 
 // Example 5
-const selectText = () => {
+const getText = () => {
   let text = "";
   text = window.getSelection()
   console.log(text.toString())
 }
 
 // Example 6
-const selectFluits = event => {
+const getFluits = event => {
   console.log(event.target.options[event.target.selectedIndex].text)
 }
 
-document.querySelector('.fluits').addEventListener('change', selectFluits);
+document.querySelector('.fluits').addEventListener('change', getFluits);
 
 
 
