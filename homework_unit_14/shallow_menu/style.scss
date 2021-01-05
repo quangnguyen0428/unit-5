@@ -29,37 +29,24 @@ a {
     overflow: hidden;
 
     .menu__list__item {
-
-        .menu__list__item__link {
-            color: #fff;
-
-            .menu__list__item__link__title {
-                padding: 20px;
-                @extend .menu__list__item__link;
-                font-size: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                i {
-                    font-size: 14px;
-                }
-
-                span {
-
-                    i{
-                        font-size: 20px;
-                        margin-right: 10px;
-                        transform: rotate(0);
-                        transition: transform 0.2s ease-in;
-                    }
-                }
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            .menu__list__item__link {
+                color: #fff;
             }
+        }
+
+        span.fa-chevron-right {
+            font-size: 13px;
+            color: #fff;
         }
         .collapse {
             width: 100%;
             background-color: $bgCollapse;
-            max-height: 0;
+            max-height: 0   ;
             overflow: hidden;
             transition: max-height 0.3s ease-in-out;
             .collapse__item {
@@ -85,4 +72,11 @@ a {
 .rotate-icon {
     transform: rotate(90deg);
     transition: transform 0.2s ease-in;
+}
+
+
+.arow {
+    width: 20px;
+    height: 20px;
+    background-color: red;
 }
